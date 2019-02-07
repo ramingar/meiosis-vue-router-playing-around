@@ -1,10 +1,10 @@
 <template>
-    <div class="home">
+    <div class="about">
         <img alt="Vue logo" src="../assets/logo.png">
         <div>
-            <div>This is text1: <span>{{text1}}</span></div>
+            <div>This is text2: <span>{{text2}}</span></div>
             <input type="text"
-                   @keyup="setText1"
+                   @keyup="setText2"
             />
         </div>
     </div>
@@ -14,13 +14,13 @@
     import {actions, state} from "../meiosis";
 
     export default {
-        name    : 'Home',
+        name    : 'AnotherPage',
         data    : () => ({reactivity: state}),
         methods : {
-            setText1: (e) => actions.setText1(e.target.value)
+            setText2: (e) => actions.setText2(e.target.value)
         },
         computed: {
-            text1: () => state.text1
+            text2: () => state.text2
         }
     }
 </script>
